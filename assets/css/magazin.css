@@ -1,0 +1,173 @@
+body{
+  background: url(../img/tiles.png);
+}
+#top{
+  top:0px;
+  max-width:100vw;
+  width:100vw;
+}
+main {
+  width:100vw;
+  height:min-content;
+  position:relative;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+section:not(#contact){
+  margin-bottom: 10px;
+  width:100%;
+}
+section:not(#contact) div{
+  width:100vw;
+  font-size: 3vw;
+  color: var(--accent);
+  box-sizing: border-box;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+section:not(#contact) ul{
+  transition: ease-in-out 0.2s;
+  overflow: hidden;
+  display:flex;
+  padding-left: 0px;
+  align-items: flex-start;
+  justify-content: center;
+  vertical-align: middle;
+  flex-direction: row;
+  flex-wrap: wrap;
+list-style: none;
+}
+button{
+  background-color: transparent;
+  position: relative;
+  border: none;
+  box-sizing: border-box;
+  min-width: 15vw;
+  padding:10px;
+  background-color:var(--main);
+  transition: ease-in-out 0.2s;
+  text-align: left;
+  border: 5px solid var(--accent);
+}
+button::before{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 10%;
+    background: var(--main);
+    height: 10px;
+    right: 20%;
+    top: -5px;
+    transform: skewX(-45deg);
+    transition: all 0.45s ease;
+  }
+  button::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 10%;
+    background: var(--main);
+    height: 10px;
+    left: 20%;
+    bottom: -5px;
+    transform: skewX(45deg);
+    transition: all 0.45s ease;
+  }
+  button:hover::before{
+    right: 80%;
+  }
+  button:hover::after{
+    left: 80%;
+  }
+  button .s1{
+  text-transform: uppercase;
+  display:block;
+  left:0px;
+  color: var(--accent);
+}
+
+  button .s2{
+  text-transform: uppercase;
+  letter-spacing: 0.5vw;
+  color: var(--accent);
+  display:block;
+  font-weight: 300;
+}
+section{
+  --main: rgba(88,0,0,1);
+  --accent: #B68834;
+}
+.cos{
+  display: flex;
+  background-color: var(--main);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.cump{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.cos li{
+  display: block;
+  width:100vw;
+  text-align: center;
+}
+
+
+@media only screen and (min-width:601px){
+  body{
+    height:10vh;
+  }
+  label{
+    width:20vw;
+    padding:15vh 0;
+    font-size:2vw;
+  }
+  button{
+    margin: 1.5vw;
+  }
+
+  button .s1{
+    font-size: 1.5vw;
+  }
+  button .s2{
+    font-size: 1vw;
+    float:right;
+  }
+  
+}
+
+@media only screen and (max-width:600px){
+  label{
+    width:30vw;
+    padding:25vh 0;
+    font-size: 6vw;
+    word-spacing: 10vw;
+  }
+  button{
+    height:12.5vh;
+    margin: 0.75vh 1.5vw;
+    min-width:35vw;
+  }
+  button .s1{
+    font-size: 3vw;
+    letter-spacing: 0.5vw;
+  }
+  button .s2{
+    position: absolute;
+    margin: 0;
+    right:2vw;
+    bottom: 0;
+  }
+}
